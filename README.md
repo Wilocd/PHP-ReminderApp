@@ -39,4 +39,4 @@ Bootstrap: Frontend framework for responsive design.
 - Delete Reminder
     ![alt text](delete.png)
 - View Reminder
-    ![alt text](image.png)
+    ![alt text](view.png)
