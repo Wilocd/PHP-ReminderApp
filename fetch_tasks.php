@@ -35,3 +35,4 @@ if (isset($_GET['status'])) {
         echo "Error: " . $e->getMessage();
     }
 } 
+?>
