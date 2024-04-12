@@ -204,31 +204,31 @@ if(isset($_POST['notification_id'])) {
 }
 
 
-if(isset($_GET['notification_id'])) {
-    // Function to fetch and display tasks based on status
-    function getTasksByStatus($pdo, $status) {
-        // Prepare SQL statement to fetch tasks with the specified status
-        $stmt = $pdo->prepare("SELECT * FROM notifications_ajax WHERE finish_status = :finish_status ORDER BY id DESC");
+// if(isset($_GET['notification_id'])) {
+//     // Function to fetch and display tasks based on status
+//     function getTasksByStatus($pdo, $status) {
+//         // Prepare SQL statement to fetch tasks with the specified status
+//         $stmt = $pdo->prepare("SELECT * FROM notifications_ajax WHERE finish_status = :finish_status ORDER BY id DESC");
 
-        // Bind parameter
-        $stmt->bindParam(':status', $status);
+//         // Bind parameter
+//         $stmt->bindParam(':status', $status);
 
-        // Execute the prepared statement
-        $stmt->execute();
+//         // Execute the prepared statement
+//         $stmt->execute();
 
-        // Fetch all rows as an associative array
-        $tasks = $stmt->fetchAll(PDO::FETCH_ASSOC);
+//         // Fetch all rows as an associative array
+//         $tasks = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-        // Return tasks as JSON
-        return json_encode($tasks);
-    }
+//         // Return tasks as JSON
+//         return json_encode($tasks);
+//     }
 
-    // Check if the status parameter is set
-    if (isset($_GET['status'])) {
-        $status = $_GET['status'];
-        echo getTasksByStatus($pdo, $status);
-    }
-}
+//     // Check if the status parameter is set
+//     if (isset($_GET['status'])) {
+//         $status = $_GET['status'];
+//         echo getTasksByStatus($pdo, $status);
+//     }
+// }
 
 
 ?>
